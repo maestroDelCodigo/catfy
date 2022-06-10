@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState, useEffect} from 'react';
+import getCategories from './services/api';
+import Categories from './components/categories/Categories.js';
 
 function App() {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(function(){
+    getCategories().then(categories => setCategories(categories))
+  },[])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className='App-content'>
+        {categories.map(singleCategories =><Categories 
+        key={singleCategories.id}
+        name={singleCategories.name}></Categories>)}
+      </section>
     </div>
   );
 }
