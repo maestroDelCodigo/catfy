@@ -12,7 +12,23 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.catImage{
+  img{
+    height: 140px;
+    width: 240px;
+  }
+  padding-bottom: 30px;
+}
+.title{
+  span{
+  white-space: nowrap; 
+  width: 200px; 
+  overflow: hidden;
+  text-overflow: clip;
+  font-size: 150px;
+  }
+  
+}
 .App-link {
   color: #61dafb;
 }
