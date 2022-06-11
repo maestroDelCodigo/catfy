@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import getCategories from '../../services/getCategories.js';
 import '../../styles/button.scss';
+import { Route } from "wouter";       
+        
 
 function Categories() {
   const [categories, setCategories] = useState([]);
@@ -10,11 +12,8 @@ function Categories() {
   }, [])
 
   return (
-    <div>
-      {
-        categories.map(cat =>
-          <button>{cat.name}</button>)
-      }
+   <div>
+      {categories.map(cat => <button>{cat.name}</button>)}
     </div>
   )
 }

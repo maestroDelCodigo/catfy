@@ -1,40 +1,34 @@
 import './App.scss';
-import React,{useState} from 'react';
 import Categories from './components/categories/Categories.js';
 import Breeds from './components/breeds/breeds';
-import MenuOption from './components/menuOption/menuOption.js';
-
+import './styles/button.scss'
+import { Route, Switch } from "wouter";
 function App() {
-  const [categories, setCategories] = useState([]);
-  const [breeds, setBreeds] = useState([]);
   return (
-    <><div className="App">
-      {/* <section className='App-content'>
-        <Categories
-          categories={categories}
-          setCategories={setCategories}>
-        </Categories>
-      </section>
-
-
-      <section className='App-content'>
-        <Breeds
-          breeds={breeds}
-          setBreeds={setBreeds}>
-        </Breeds>
-      </section> */}
+    <><><div className="App">
       <div className='title'>
-      <span>CATFY</span>
+        <span>CATFY</span>
       </div>
-      
       <div className='catImage'>
-      <img src={"https://static.vecteezy.com/system/resources/previews/001/199/162/non_2x/silhouettes-cat-png.png"}></img>
+        <a href='/'>
+        <img alt='gato' src={"https://static.vecteezy.com/system/resources/previews/001/199/162/non_2x/silhouettes-cat-png.png"}></img>
+        </a>
       </div>
-      
-    </div><section>
-        <MenuOption></MenuOption>
-      </section></>
-    
+
+      <Switch>
+        <Route path='/categories' component={Categories}></Route>
+        <Route path='/breeds' component={Breeds}></Route>
+        <Route path='/' component={App}></Route>
+      </Switch>
+
+      <div className='buttonLink'>
+        <a href="/categories">Categories</a>
+      </div>
+    </div><div>
+        <div className='buttonLink'>
+          <a href="/breeds">Breeds</a>
+        </div>
+      </div></></>
   );
 }
 
