@@ -1,10 +1,21 @@
-import React from 'react'
-import '../../styles/button.scss'
-function Categories({name}){
+import React, { useState, useEffect } from 'react'
+import getCategories from '../../services/getCategories.js';
+import '../../styles/button.scss';
+
+function Categories() {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(function () {
+    getCategories().then(categories => setCategories(categories))
+  }, [])
+
   return (
-<section>
-  <button class='lined thick'>{name}</button>
-</section>
+    <div>
+      {
+        categories.map(cat =>
+          <button>{cat.name}</button>)
+      }
+    </div>
   )
 }
 
