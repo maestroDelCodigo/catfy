@@ -11,10 +11,11 @@ function Breeds({ name }) {
     },[])
   
     return (
-        <div>
+        <div className='buttonContainer'>
       {
         breeds.map(br =>
-          <button>{br.name}</button>)
+          <div className='buttonLinkCategories'><a href="/categories/:keyword">{br.name}</a>
+          </div>)
       }
     </div>
     );
