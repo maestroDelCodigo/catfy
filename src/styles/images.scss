@@ -2,8 +2,12 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    flex: 0 0 30%; 
     justify-content:space-between;
+    width: 50%;
+    margin: auto;
+    .singleImage {
+        flex: 33.33%;
+      }
     img{
         width: 130px;
         height: 130px;
