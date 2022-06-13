@@ -13,7 +13,7 @@ function PhotoByCategory({params}) {
     return (
         <><div className='imageContainer'>
             {photos.map(singlePhoto =><div className='singleImage'>
-                <img alt='catphoto' src={singlePhoto.url}></img>
+                <img className='photo' alt='catphoto' src={singlePhoto.url}></img>
             </div>)}
         </div></>
     )
