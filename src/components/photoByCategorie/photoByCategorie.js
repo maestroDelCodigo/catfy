@@ -8,7 +8,7 @@ function PhotoByCategory({params}) {
     useEffect(function () {
         getCategoriesById({ keyword })
             .then(photos => setPhotos(photos))
-    }, [])
+    }, [keyword])
     return (
         <><div>
             {photos.map(singlePhoto =><div>
