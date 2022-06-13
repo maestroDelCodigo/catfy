@@ -1,4 +1,4 @@
-const apiKey = "6baccb43-514e-41e0-a52c-c7ada0ac6bac";
+//const apiKey = "6baccb43-514e-41e0-a52c-c7ada0ac6bac";
 
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
