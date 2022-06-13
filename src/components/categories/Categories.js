@@ -11,7 +11,7 @@ function Categories() {
   return (
    <><div className='buttonContainer'>
       {categories.map(cat => <div className='buttonLinkCategories'>
-        <a href="categories/1">{cat.name}</a>
+        <a href="/categories/1">{cat.name}</a>
       </div>)}
       
     </div></>
