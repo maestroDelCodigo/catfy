@@ -14,7 +14,7 @@ function Breeds({ name }) {
         <div className='buttonContainer'>
       {
         breeds.map(br =>
-          <div className='buttonLinkCategories'><a href="/categories/:keyword">{br.name}</a>
+          <div className='buttonLinkCategories'><a href="/breeds/:keyword">{br.name}</a>
           </div>)
       }
     </div>
