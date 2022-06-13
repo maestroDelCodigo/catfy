@@ -7,7 +7,7 @@ function PhotoByCategory({params}) {
     const [photos, setPhotos] = useState([]);
     const {keyword} = params
     useEffect(function () {
-        getCategoriesById({  })
+        getCategoriesById()
             .then(photos => setPhotos(photos))
     }, [])
     return (
