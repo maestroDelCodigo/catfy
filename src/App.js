@@ -18,7 +18,7 @@ function App() {
     </div>
         <div className='buttonLink'>
           <a href="/breeds">Breeds</a>
-          <a href="/categories/">Categories</a>
+          <a href="/categories">Categories</a>
         </div>
     </></>
       <Route path='/categories' component={Categories}></Route>
