@@ -1,9 +1,11 @@
 .imageContainer{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    flex: 0 0 30%; 
+    justify-content:space-between;
     img{
-        max-width: 200px;
-        max-height: 200px;
+        width: 130px;
+        height: 130px;
     }
 }
