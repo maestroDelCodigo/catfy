@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import getCategoriesById from '../../services/getCategoriesById.js';
 import '../../styles/button.scss';
+import '../../styles/images.scss';
 function PhotoByCategory({params}) {
 
     const [photos, setPhotos] = useState([]);
@@ -10,7 +11,7 @@ function PhotoByCategory({params}) {
             .then(photos => setPhotos(photos))
     }, [keyword])
     return (
-        <><div>
+        <><div className='imageContainer'>
             {photos.map(singlePhoto =><div>
                 <img alt='catphoto' src={singlePhoto.url}></img>
             </div>)}
