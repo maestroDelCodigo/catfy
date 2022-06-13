@@ -23,7 +23,7 @@ function App() {
     </></>
       <Route path='/categories' component={Categories}></Route>
       <Route path='/breeds' component={Breeds}></Route>
-      <Route path='/categories/:keyword' component={PhotoByCategory}></Route>
+      <Route path='/categories/1' component={PhotoByCategory}></Route>
       </>
   );
 }
