@@ -7,7 +7,7 @@ function Categories() {
   useEffect(function () {
     getCategories().then(categories => setCategories(categories))
   }, [])
-  const hrefLink = "/categories/" + "1"
+  
   return (
    <><div className='buttonContainer'>
       {categories.map(cat => <div className='buttonLinkCategories'>
