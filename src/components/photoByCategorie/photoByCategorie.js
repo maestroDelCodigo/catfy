@@ -7,9 +7,9 @@ function PhotoByCategory({params}) {
     const [photos, setPhotos] = useState([]);
     const {keyword} = params
     useEffect(function () {
-        getCategoriesById()
+        getCategoriesById({ keyword })
             .then(photos => setPhotos(photos))
-    }, [])
+    }, [keyword])
     return (
         <><div className='imageContainer'>
             {photos.map(singlePhoto =><div className='singleImage'>
