@@ -9,7 +9,7 @@ var requestOptions = {
     redirect: 'follow'
   };
 export default function getCategoriesById({keyword}){
-    const url = `https://api.thecatapi.com/v1/images/search?category_ids=1&limit=9`
+    const url = `https://api.thecatapi.com/v1/images/search?category_ids=1&limit=11`
     return fetch(url,requestOptions)
     .then(res => res.json())
 }
